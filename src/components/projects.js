@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+// import './App.css';
 
-class App extends Component {
+class Projects extends Component {
   render() {
     return (
       <div className="App">
-        My Final Project.
+        Imported component from 'projects.js'
+        {this.props.test}
       </div>
     );
   }
 }
 
-export default App;
+export default Projects;
