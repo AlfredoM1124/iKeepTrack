@@ -4,11 +4,30 @@ import Projects from './components/projects';
 // import './App.css';
 
 class App extends Component {
+  constructor(){
+    super();
+    this.state = {
+      projects: [
+        {
+          title: 'Inventory Management App',
+          category: 'Mobile Development',
+        },
+        {
+          title: 'User Login',
+          category: 'User Authentication',
+        },
+        {
+          title: 'User interface',
+          category: 'Front-End Development',
+        },
+      ]
+    }
+  }
   render() {
     return (
       <div className="App">
         My Final Project.
-        <Projects test="Hello World!" />
+        <Projects projects={this.state.projects} />
       </div>
     );
   }
