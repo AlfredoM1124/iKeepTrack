@@ -13,6 +13,52 @@
     <title>iKeepTrack - Inventory Management App</title>
   </head>
   <body>
+      <div class="overlay"><div class="loader"></div></div>
+
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+          <a class="navbar-brand" href="#">Inventory System</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html"> <span class="fa fa-home">&nbsp;</span>Home <span class="sr-only">(current)</span></a>
+              </li> 
+            </ul>
+          </div>
+        </nav>
+      <!-- Navbar Ends -->
+      <br>
+
+
+      <div class="card" style="width: 20rem;margin:0 auto;">
+          <img class="card-img-top" style="width:60%; margin:0 auto;" src="./images/login.png" alt="Card image cap">
+          <div class="card-body">
+            <form id="login_form" onsubmit="return false" autocomplete="off">
+              <div class="form-group">
+                <label for="log_email">Email address</label>
+                <input type="email" name="log_email" class="form-control" id="log_email" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="e-error" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="log_password">Password</label>
+                <input type="password" name="log_password" class="form-control"  id="log_password" placeholder="Password">
+                <small id="p-error" class="form-text text-muted"></small>
+              </div>
+              <button type="submit" name="login" class="btn btn-primary"><span class="fa fa-user"></span>&nbsp;Login</button>
+              <span><a href="register.js">Register</a></span>
+            </form>
+          </div>
+          <div class="card-footer text-muted">
+            <a href="#">Forgot your password?</a>
+          </div>
+        </div>
+        </div>
+
+    <!-- ================================== -->
+    <!-- Scripts -->
     <!-- jQuery first, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
