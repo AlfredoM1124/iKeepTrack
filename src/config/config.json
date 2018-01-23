@@ -1,0 +1,23 @@
+{
+    "production": {
+        "username": "iKeepTrack_finalproject",
+        "password": "",
+        "database": "iKeepTrack_finalproject",
+        "host": "iKeepTrack.center",
+        "dialect": "mysql"
+    },
+    "test": {
+        "username": "iKeepTrack_finalproject",
+        "password": "",
+        "database": "iKeepTrack_finalproject",
+        "host": "iKeepTrack.center",
+        "dialect": "mysql"
+    },
+    "development": {
+        "username": "iKeepTrack_finalproject",
+        "password": "",
+        "database": "iKeepTrack_finalproject",
+        "host": "iKeepTrack.center",
+        "dialect": "mysql"
+    }
+}
