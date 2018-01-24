@@ -15,13 +15,20 @@ var Registration = React.createClass({
 			case 1:
 				return <AccountFields />
 			case 2:
-				return <SurveyFields />
+                return <Confirmation />
 			case 3:
-				return <Confirmation />
-			case 4:
-				return <Success />
+                return <Success />	
 		}
 		}
-},)
+},
+)
+
+var fieldValues = {
+  name     : null,
+  email    : null,
+  password : null,
+  age      : null,
+  colors   : []
+}
 
 module.exports = Registration
