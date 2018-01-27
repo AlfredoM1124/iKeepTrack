@@ -37,4 +37,4 @@ var AccountFields = React.createClass({
   }
 })
 
-module.exports = AccountFields
+module.exports = AccountFields;

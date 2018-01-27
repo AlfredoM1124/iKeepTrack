@@ -68,4 +68,4 @@ var Registration = React.createClass({
 
 
 
-module.exports = Registration
+module.exports = Registration;
