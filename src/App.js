@@ -1,24 +1,18 @@
 import React, { Component } from 'react';
 // import logo from './logo.svg';
-import Projects from './components/projects';
+ import Projects from './components/projects';
 import './App.css';
 
 class App extends Component {
-  state = {users: []}
-
-  componentDidMount() {
-    fetch('/users')
-      .then(res => res.json())
-      .then(users => this.setState({ users }));
-  }
-
   render() {
     return (
       <div className="App">
-        <h1>Users</h1>
-        {this.state.users.map(user =>
-          <div key={user.id}>{user.username}</div>
-        )}
+        <div className="App-Header">
+          <h2>Welcome to iKeepTrack</h2>
+          </div>
+          <p className="App-into">
+          OIAWNDIUANWDPUNAWIDBAIUWNDIUAWBDAWIUDNPAWIU
+          </p>
       </div>
     );
   }
