@@ -10,7 +10,7 @@ class App extends Component {
         <div className="App-Header">
           <h2>Welcome to iKeepTrack</h2>
           </div>
-          <p className="App-into">
+          <p className="App-intro">
           OIAWNDIUANWDPUNAWIDBAIUWNDIUAWBDAWIUDNPAWIU
           </p>
       </div>
