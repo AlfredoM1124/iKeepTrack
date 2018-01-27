@@ -45,10 +45,24 @@ var Registration = React.createClass({
 
 	// Same as nextStep, but decrementing
 	previousStep: function() {
-  	this.setState({
-    step : this.state.step - 1
-  	})
+  		this.setState({
+    		step : this.state.step - 1
+  		})
 	},
+	render: function() {
+  		switch (this.state.step) {
+    		case 1:
+      			return <AccountFields fieldValues={fieldValues}
+                            nextStep={this.nextStep}
+                            saveValues={this.saveValues} />
+    		case 2:
+				return <Confirmation fieldValues={fieldValues}
+                           previousStep={this.previousStep}
+                           submitRegistration={this.submitRegistration} />
+    		case 3:
+				return <Success fieldValues={fieldValues} />
+  		}
+	}
 },
 )
 
