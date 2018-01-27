@@ -6,7 +6,7 @@ class Projects extends Component {
   render() {
       console.log(this.props);
     return (
-      <div className="App">
+      <div className="Projects">
         Imported component from 'projects.js'
         {this.props.test}
       </div>
