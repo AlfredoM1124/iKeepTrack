@@ -1,28 +1,38 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-import Projects from './components/projects';
-import Registration from './components/Register/registration.jsx';
-import AccountFields from './components/Register/AccountFields.jsx';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
+// import Header from './components/Navigation/Header';
+import Main from './components/Main/Main';
+// import Feet from './components/Footer/Footer';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isAuthenticated: false
+    };
+    this.userHasAuthenticated = this.userHasAuthenticated.bind(this);
+  }
+
+  userHasAuthenticated = authenticated => {
+    this.setState({ isAuthenticated: authenticated });
+  }
 
   render() {
+    const authProps = {
+      isAuthenticated: this.state.isAuthenticated,
+      userHasAuthenticated: this.userHasAuthenticated
+    };
     return (
-      <div className="App">
-        <div className="App-Header">
-          <h2>Welcome to iKeepTrack</h2>
-          </div>
-          <AccountFields />
-          <Registration />
-          <Projects />
-          <p className="App-intro">
-          OIAWNDIUANWDPUNAWIDBAIUWNDIUAWBDAWIUDNPAWIU
-          </p>
-      </div>
+      <Router>
+        <div className="App">
+            {/* <Header /> */}
+            <Main authProps={authProps} />
+            {/* <Feet /> */}
+        </div>
+      </Router>
     );
   }
 }
-
 
 export default App;
