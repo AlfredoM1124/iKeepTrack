@@ -1,6 +1,7 @@
-var React = require('react')
+var React = require('react');
+var createReactClass = require('create-react-class');
 
-var Success = React.createClass({
+module.exports = createReactClass({
   render: function() {
     return (
       <div>
@@ -11,4 +12,4 @@ var Success = React.createClass({
   }
 })
 
-module.exports = Success
+module.exports = createReactClass;

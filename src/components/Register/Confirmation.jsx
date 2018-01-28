@@ -1,6 +1,7 @@
-var React = require('react')
+var React = require('react');
+var createReactClass = require('create-react-class');
 
-var Confirmation = React.createClass({
+module.exports = createReactClass({
   render: function() {
     return (
       <div>
@@ -22,4 +23,4 @@ var Confirmation = React.createClass({
   }
 })
 
-module.exports = Confirmation
+module.exports = createReactClass;

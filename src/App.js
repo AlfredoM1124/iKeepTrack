@@ -6,25 +6,6 @@ import AccountFields from './components/Register/AccountFields.jsx';
 import './App.css';
 
 class App extends Component {
-constructor(){
-  super();
-  this.state = {
-    projects: [
-      {
-        title: 'Inventory Manager',
-        category: 'Web-Development'
-      },
-      {
-        title: 'Item Database',
-        category: 'Back-end Development'
-      },
-      {
-        title: 'React Components',
-        category: 'Front-End Development'
-      }
-    ]
-  }
-}
 
   render() {
     return (
@@ -42,5 +23,6 @@ constructor(){
     );
   }
 }
+
 
 export default App;

@@ -1,6 +1,7 @@
-var React = require('react')
+var React = require('react');
+var createReactClass = require('create-react-class');
 
-var AccountFields = React.createClass({
+module.exports = createReactClass({
   render: function() {
     return ( <div>
       <label>Name</label> 
@@ -37,4 +38,4 @@ var AccountFields = React.createClass({
   }
 })
 
-module.exports = AccountFields;
+module.exports = createReactClass;

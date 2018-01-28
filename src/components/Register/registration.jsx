@@ -2,6 +2,7 @@ var React         = require('react')
 var AccountFields = require('./AccountFields')
 var Confirmation  = require('./Confirmation')
 var Success       = require('./Success')
+var createReactClass = require('create-react-class')
 
 var fieldValues = {
   name     : null,
@@ -11,7 +12,7 @@ var fieldValues = {
   colors   : []
 };
 
-var Registration = React.createClass({
+ module.exports = createReactClass({
 	getInitialState: function() {
 		return {
 			step: 1
@@ -66,6 +67,4 @@ var Registration = React.createClass({
 },
 )
 
-
-
-module.exports = Registration;
+module.exports = createReactClass;
