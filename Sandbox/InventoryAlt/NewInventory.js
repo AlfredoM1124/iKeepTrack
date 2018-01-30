@@ -4,14 +4,14 @@
 // --> Title
 // --> Form
 // --> List
-// ----> Todo
+// ----> Inventory
 // --> Footer
 
 // stateless component
 const Title = () => {
 	return (
 		<div id="titleWrapper">
-			<h2 className="textCenter">To-do List</h2>
+			<h2 className="textCenter">Inventory List</h2>
 		</div>
 	);
 };
@@ -24,7 +24,7 @@ class Form extends React.Component {
 			value: ''
 		};
 		this.handleChange = this.handleChange.bind(this);
-		this.handleNewTodoAddition = this.handleNewTodoAddition.bind(this);
+		this.handleNewInventoryAddition = this.handleNewInventoryAddition.bind(this);
 	}
 	
 	handleChange(event) {
@@ -33,13 +33,13 @@ class Form extends React.Component {
 		});
 	}
 	
-	handleNewTodoAddition() {
+	handleNewInventoryAddition() {
 		if(this.input.value !== '') {
-			this.props.addTodo(this.input.value);
+			this.props.addInventory(this.input.value);
 			this.setState({
 				value: ''
 			});
-			this.input.placeholder = "Add todo here...";
+			this.input.placeholder = "Add Inventory here...";
 		}
 	}
 	
@@ -54,13 +54,13 @@ class Form extends React.Component {
 						this.input = node;
 					}}
 					value={this.state.value}
-					placeholder="Add todos here..."
+					placeholder="Add items here..."
 					autocomplete="off"
 					onChange={this.handleChange}
 				/>
 
 				<button 
-					onClick={this.handleNewTodoAddition}
+					onClick={this.handleNewInventoryAddition}
 				>	
 					+
 				</button>	
@@ -69,15 +69,15 @@ class Form extends React.Component {
 	}
 }
 
-const Todo = ({todo, remove}) => {
-	// single todo 
+const Inventory = ({inventory, remove}) => {
+	// single inventory 
 	return (
-		<p className="todos">
-			{todo.value}
+		<p className="inventories">
+			{inventory.value}
 			<span 
 				className="removeBtn"
 				onClick={()=> {
-					remove(todo.id)
+					remove(inventory.id)
 				}}>
 				x
 			</span>
@@ -85,23 +85,23 @@ const Todo = ({todo, remove}) => {
 	);
 };
 
-const List = ({todos, remove}) => {
-	let allTodos = [];
+const List = ({inventories, remove}) => {
+	let allInventories = [];
 	
-	if(todos.length > 0) {
-		allTodos = todos.map(todo => {
-			// passing todo and remove method reference
-			return (<Todo todo={todo} remove={remove} />);
-			//return (<p>{todo.value}</p>);
+	if(inventories.length > 0) {
+		allInventories = inventories.map(inventory => {
+			// passing inventory and remove method reference
+			return (<Inventory inventory={inventory} remove={remove} />);
+			//return (<p>{inventory.value}</p>);
 		});
 	} else {
-		allTodos.push(<h3 id="acu">All caught up !</h3>);	
+		allInventories.push(<h3 id="acu">All caught up !</h3>);	
 	}
 	
 	return (
 		<div id="list">
-			<p id="info"> Your Todos: </p>
-			{allTodos}
+			<p id="info"> Your Inventories: </p>
+			{allInventories}
 		</div>
 	);
 };
@@ -109,9 +109,9 @@ const List = ({todos, remove}) => {
 const Footer = () => {
 	return (
 		<div id="footer">
-			<a href="http://iamarshad.com" target="_blank">
+			<a href="https://github.com/AlfredoM1124" target="_blank">
 				<p>
-					Arshad Khan
+					Alfredo Munoz
 				</p>
 			</a>
 		</div>
@@ -126,35 +126,35 @@ class Container extends React.Component {
 		const introData = [
 			{
 				id: -3, 
-				value: "Hi! This is a simple todo list app made by REACT <3"
+				value: "Welcome to iKeepTrack! Easily manage a list of items, for those of us who just can't keep track of all our stuff."
 			},
 			{
 				id: -2,
-				value: "Hover over todos and click on `X` to delete them!"
+				value: "Hover over items and click on `X` to delete them!"
 			},
 			{
 				id: -1,
-				value: "Add new todos and come back any time later, I will save them for you!"
+				value: "Add new items, delete old ones, keep track of everything."
 			}
 		];
 		
-		const localData = localStorage.todos && JSON.parse(localStorage.todos);
+		const localData = localStorage.inventories && JSON.parse(localStorage.inventories);
 
 		this.state = { 
 			data: localData || introData
 		};
 		
 		// binding methods
-		this.addTodo = this.addTodo.bind(this);
-		this.removeTodo = this.removeTodo.bind(this);
+		this.addInventory = this.addInventory.bind(this);
+		this.removeInventory = this.removeInventory.bind(this);
 	}
 	// Handler to update localStorage
 	updateLocalStorage() {
 		if (typeof(Storage) !== "undefined")
-			localStorage.todos = JSON.stringify(this.state.data);
+			localStorage.inventories = JSON.stringify(this.state.data);
 	}
-	// Handler to add todo
-	addTodo(val) {
+	// Handler to add Inventory
+	addInventory(val) {
 		let id;
 		// if localStorage is available then increase localStorage count
 		// else use global window object's id variable
@@ -165,12 +165,12 @@ class Container extends React.Component {
 			id = window.id++;
 		}
 		
-		const todo = { 
+		const inventory = { 
 			value: val, 
 			id: id 
 		};
 		
-		this.state.data.push(todo);
+		this.state.data.push(inventory);
 		// update state
 		this.setState({
 			data: this.state.data
@@ -179,12 +179,12 @@ class Container extends React.Component {
 			this.updateLocalStorage();
 		});
 	}
-	// Handler to remove todo
-	removeTodo(id) {
-		// filter out the todo that has to be removed
-		const list = this.state.data.filter(todo => {
-			if (todo.id !== id)
-				return todo;
+	// Handler to remove Inventory
+	removeInventory(id) {
+		// filter out the Inventory that has to be removed
+		const list = this.state.data.filter(inventory => {
+			if (inventory.id !== id)
+				return inventory;
 		});
 		// update state
 		this.setState({
@@ -198,15 +198,15 @@ class Container extends React.Component {
 	componentDidMount() {
 		localStorage.clear();
 		if (typeof(Storage) !== "undefined") {
-			if(!localStorage.todos) {
-				localStorage.todos = JSON.stringify(this.state.data);
+			if(!localStorage.inventories) {
+				localStorage.inventories = JSON.stringify(this.state.data);
 			}
 			if(!localStorage.count) {
 				localStorage.count = 0;
 			}
 
 		} else {
-			 console.log("%cApp will not remember todos created as LocalStorage Is Not Available",
+			 console.log("%cApp will not remember inventories created as LocalStorage Is Not Available",
 							 "color: hotpink; background: #333; font-size: x-large;font-family: Courier;");
 			window.id = 0;
 		}
@@ -216,8 +216,8 @@ class Container extends React.Component {
 		return (
 			<div id="container">
 				<Title />
-				<Form addTodo={this.addTodo} />
-				<List todos={this.state.data} remove={this.removeTodo} />
+				<Form addInventory={this.addInventory} />
+				<List inventories={this.state.data} remove={this.removeInventory} />
 				<Footer />
 			</div>
 		);
