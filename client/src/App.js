@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import {CSSTransitionGroup} from 'react-transition-group';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
-// import Feet from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';
 
 class App extends Component {
   constructor(props) {
@@ -29,7 +28,7 @@ class App extends Component {
         <div className="App">
             <Header />
             <Main authProps={authProps} />
-            {/* <Feet /> */}
+            <Footer />
         </div>
       </Router>
     );
