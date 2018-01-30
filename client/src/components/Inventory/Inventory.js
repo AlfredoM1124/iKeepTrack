@@ -27,7 +27,7 @@ const Inventory = ({inventory, remove}) => {
   }
   
   const InventoryList = ({inventories, remove}) => {
-    // Map through the inventorys
+    // Map through the inventory lists
     const inventoryNode = inventories.map((inventory) => {
       return (<Inventory inventory={inventory} key={inventory.id} remove={remove}/>)
     });
