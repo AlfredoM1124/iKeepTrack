@@ -91,15 +91,15 @@
 	border-right: none;
 	width: 70%;
 	color: #333;
-	border-color: #d63f74;
+	border-color: #297CBB;
   }
   #container input:focus, #container input:active {
 	outline: none;
   }
   #container button {
-	border: solid 1px #d63f74;
+	border: solid 1px #297CBB;
 	padding: 7px 10px;
-	background: rgba(214, 63, 116, 0.8);
+	background: #288ad6;
 	cursor: pointer;
 	width: 15%;
 	min-width: 20px;
@@ -113,7 +113,7 @@
 	outline: none;
   }
   #container button:hover, #container button:active {
-	background: #d63f74;
+	background: #47a899;
   }
   #container button, #container input {
 	vertical-align: middle;
@@ -150,7 +150,7 @@
   #container #footer p:after {
 	content: "/>";
   }
-  #container .todos {
+  #container .inventories {
 	-webkit-transition: all 100ms linear 100ms;
 	transition: all 100ms linear 100ms;
 	position: relative;
@@ -161,20 +161,20 @@
 	border: solid 1px transparent;
 	color: #6d639a;
   }
-  #container .todos:hover {
+  #container .inventories:hover {
 	cursor: pointer;
 	border: solid 1px;
   }
-  #container .todos:hover span {
+  #container .inventories:hover span {
 	visibility: visible;
 	color: inherit;
   }
-  #container .todos span {
+  #container .inventories span {
 	-webkit-transition: all 100ms linear 100ms;
 	transition: all 100ms linear 100ms;
 	visibility: hidden;
   }
-  #container .todos span:hover {
+  #container .inventories span:hover {
 	cursor: pointer;
   }
 /*------------------------------------------

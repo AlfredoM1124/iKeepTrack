@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './output.css';
+import './index.css';
 // import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -116,9 +116,9 @@ const Footer = () => {
 	return (
 		<div id="footer">
 			<a href="https://github.com/AlfredoM1124" target="_blank">
-				<p>
+				{/* <p> */}
 					Alfredo Munoz
-				</p>
+				{/* </p> */}
 			</a>
 		</div>
 	);
