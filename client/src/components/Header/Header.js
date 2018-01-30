@@ -31,8 +31,8 @@ class Header extends React.Component {
   render() {
     return (    
       <div className="container-width">
-        <Navbar color="#297CBB" expand="md">
-          <NavbarBrand href="/"><img height="35%"  width="35%" src="../../public/favicon.ico" alt="logo" /></NavbarBrand>
+        <Navbar color="blue" expand="md">
+          <NavbarBrand href="/"><img height="35%"  width="35%" src="../public/favicon.ico" alt="logo" /></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar >
           <Nav className="ml-auto" navbar>

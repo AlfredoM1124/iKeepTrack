@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import {CSSTransitionGroup} from 'react-transition-group';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
-// import Header from './components/Navigation/Header';
+import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 // import Feet from './components/Footer/Footer';
 
@@ -26,7 +27,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-            {/* <Header /> */}
+            <Header />
             <Main authProps={authProps} />
             {/* <Feet /> */}
         </div>
