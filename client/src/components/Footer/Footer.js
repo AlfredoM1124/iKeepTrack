@@ -2,7 +2,7 @@ import React from 'react';
 import { Col, Row, InputGroup, Input, Form, Button, FormGroup, Label } from 'reactstrap';
 import axios from 'axios';
 
-const Feet = props => (
+const Footer = props => (
     <div className="container">
         <Row>
             <Col style={{ textAlign: 'left' }} md="4" sm="12">

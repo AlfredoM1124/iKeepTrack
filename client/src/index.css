@@ -35,23 +35,23 @@
   }
   
   ::-webkit-input-placeholder {
-	color: rgba(214, 63, 116, 0.5);
+	color:#297CBB;
   }
   
   :-moz-placeholder {
-	color: rgba(214, 63, 116, 0.5);
+	color: #297CBB;
   }
   
   ::-moz-placeholder {
-	color: rgba(214, 63, 116, 0.5);
+	color:#297CBB;
   }
   
   :-ms-input-placeholder {
-	color: rgba(214, 63, 116, 0.5);
+	color: #297CBB;
   }
   
   body {
-	background: #fefefe;
+	background: #67747c56;
   }
   
   .textCenter {
@@ -59,11 +59,11 @@
   }
   
   .removeBtn {
-	position: absolute;
-	right: 8px;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-			transform: translateY(-50%);
+		position: absolute;
+		right: 8px;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
   }
   
   #container {
@@ -74,7 +74,12 @@
   }
   #container h2 {
 	margin-bottom: 30px;
-	color: #333;
+	color:#297CBB;
+	border-radius: 25px;
+    background: #73AD21;
+    padding: 20px; 
+    width: 500px;
+    height: 150px;
   }
   #container #form {
 	margin-bottom: 50px;
@@ -82,10 +87,10 @@
   #container #info {
 	padding: 7px;
 	text-align: left;
-	color: rgba(51, 51, 51, 0.5);
+	color: white;
   }
   #container input {
-	background: transparent;
+	background: white;
 	border: solid 1px;
 	padding: 7px 10px;
 	border-right: none;
@@ -142,7 +147,7 @@
 	color: #d63f74;
   }
   #container #footer p:hover:before, #container #footer p:hover:after {
-	color: #6d639a;
+	color: #2c3643;
   }
   #container #footer p:before {
 	content: "<";
@@ -159,7 +164,7 @@
 	padding: 7px;
 	padding-right: 28px;
 	border: solid 1px transparent;
-	color: #6d639a;
+	color: #2c3643;
   }
   #container .inventories:hover {
 	cursor: pointer;
