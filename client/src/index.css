@@ -22,7 +22,7 @@
 /* Secondary Pallete:
   $beige: #cfcbaf
   $darkred: #841e1b
- $darkcyan: #47a899
+  $darkcyan: #47a899
 */
 /* ------------------- */
 
@@ -51,7 +51,8 @@
   }
   
   body {
-	background: #67747c56;
+  background-image: url('./AppBackground.jpg');
+  background-color: #cccccc;
   }
   
   .textCenter {
@@ -72,22 +73,28 @@
 	margin: 60px auto 0 auto;
 	padding: 0px 20px;
   }
+  /* Title Wrapper */
   #container h2 {
-	margin-bottom: 30px;
-	color:#297CBB;
+  margin-bottom: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+	color:white;
 	border-radius: 25px;
-    background: #73AD21;
+    /* background: #feef6da6; */
     padding: 20px; 
     width: 500px;
-    height: 150px;
+    height: 100px;
   }
   #container #form {
 	margin-bottom: 50px;
   }
   #container #info {
-	padding: 7px;
-	text-align: left;
-	color: white;
+	padding: 25px;
+  color: White;
+  border-radius: 25px;
+    /* background: #feef6da6;  */
+    width: 200px;
+    height: 10px;
   }
   #container input {
 	background: white;
@@ -130,16 +137,21 @@
 	text-align: left;
 	padding: 7px;
   }
+  #container h3{
+    color: white;
+  }
+  /* Footer Border */
   #container #footer {
 	margin: 50px 0 30px 0;
 	padding-top: 30px;
 	text-align: left;
 	border-top: dotted 2px #d63f74;
   }
+  /* Github Link */
   #container #footer p {
 	padding: 7px;
 	display: inline-block;
-	color: #333;
+	color: white;
 	-webkit-transition: all 100ms linear 80ms;
 	transition: all 100ms linear 80ms;
   }
@@ -149,12 +161,12 @@
   #container #footer p:hover:before, #container #footer p:hover:after {
 	color: #2c3643;
   }
-  #container #footer p:before {
+  /* #container #footer p:before {
 	content: "<";
   }
   #container #footer p:after {
 	content: "/>";
-  }
+  } */
   #container .inventories {
 	-webkit-transition: all 100ms linear 100ms;
 	transition: all 100ms linear 100ms;
@@ -164,7 +176,7 @@
 	padding: 7px;
 	padding-right: 28px;
 	border: solid 1px transparent;
-	color: #2c3643;
+	color: white;
   }
   #container .inventories:hover {
 	cursor: pointer;

@@ -14,7 +14,7 @@ import React from 'react';
 const Title = () => {
 	return (
 		<div id="titleWrapper">
-			<h2 className="textCenter">Inventory List</h2>
+			<h2 className="textCenter">iKeepTrack</h2>
 		</div>
 	);
 };
