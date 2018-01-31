@@ -1,5 +1,6 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
+import Header from '../Header/Header';
+import ReactDOM from 'react-dom';
 
 // Component Structure
 // --------------------
@@ -218,6 +219,7 @@ class Container extends React.Component {
 	render() {
 		return (
 			<div id="container">
+				{/* <Header /> */}
 				<Title />
 				<Form addInventory={this.addInventory} />
 				<List inventories={this.state.data} remove={this.removeInventory} />
@@ -227,5 +229,3 @@ class Container extends React.Component {
 	}
 }
 export default Container;
-
-// ReactDOM.render(<Container />, app);
