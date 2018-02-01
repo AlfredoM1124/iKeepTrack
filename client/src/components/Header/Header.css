@@ -1,3 +1,30 @@
+/* Style Guide */
+/* http://rizzo.lonelyplanet.com/styleguide/design-elements/colours */
+
+/* 
+  $darkgrey: #2c3643
+  $titlegrey: #3b444f
+  $bodygray: #67747c
+  $lightgray: #99a9b3
+  $subduedgray: #dbe6ec
+*/
+/* Primary Colors:
+  $navblue: #1d508d
+  $lpblue: #297CBB
+  $linkblue: #288ad6
+  $yella: #feef6d
+  $orange: #ffc83f
+  $red: #fa5e5b
+  $green: #16c98d
+*/
+
+/* Secondary Pallete:
+  $beige: #cfcbaf
+  $darkred: #841e1b
+  $darkcyan: #47a899
+*/
+/* ------------------- */
+
 .nav-item {
     padding: 10px 20px 10px 20px;
 };

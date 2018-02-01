@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, ButtonGroup, Jumbotron } from 'reactstrap';
-// import Failed from '../Errors/Failed';
+import Failed from '../Errors/Failed';
 import axios from 'axios';
 
 class Login extends React.Component {
